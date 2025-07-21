@@ -1,0 +1,406 @@
+.header-image {
+    width: 100%;
+    position: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(var(--black), 0.3);
+}
+
+.header-div{
+    position: relative;
+    width: 100%;
+}
+
+.header-img-text{
+    position: absolute;
+    font-family: 'Poppins', Times, serif;
+    color: rgb(var(--white));
+    padding-left: 15px;
+    text-shadow: 5px 5px 10px rgba(var(--black), 0.3);
+    left: 0;
+    right: 0;
+    bottom: -50px;
+    font-size: 3.5rem;
+    background: linear-gradient(rgba(var(--black), 0.001), rgba(var(--black), 0.7));
+    border-radius: 0 0 10px 10px;
+}
+
+.price {
+    font-size: 1.5em; /* Set font size to half of the number */
+     /* Align the text as subscript */
+}
+
+.price .currency {
+    font-size: 0.75em; /* Set font size to half of the number */
+    vertical-align: sub; /* Align the text as subscript */
+}
+
+.my-image{
+    width: 10em;
+    height: 10em;
+}
+
+.product-container{
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    background-color: rgb(var(--white));
+    border-color: rgb(var(--border-dark));
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(var(--black), 0.1);
+
+}
+
+.product-card {
+    position: relative;
+    background-color: rgba(var(--background-light), .7);
+    height: auto;
+    min-height: 320px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(var(--black), 0.1);
+    margin-top: 10px;
+    padding-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(var(--black), 0.15);
+}
+
+.product-card-img{
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(var(--black), 0.15);
+}
+
+.product-details-button {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    background-color: rgba(var(--primary-color), .7); ; 
+    color: rgb(var(--white));
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+    text-decoration: none; 
+    font-size: 1rem; 
+    font-weight: bold; 
+}
+
+.product-details-button:hover {
+    background-color: rgba(var(--primary-color), .5);
+}
+
+/* Add Product Page */
+.product-form form {
+    margin-top: -20px;
+}
+
+.product-form h2{
+    font-size: 2.5rem;
+}
+
+.product-form form .product-input{
+    position: relative;
+    width: 60%;
+    height: 50px;
+    border-bottom: 2px solid rgb(var(--black));
+    margin: 30px 0%;
+}
+
+.product-input input {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding-right: 28px;
+    box-sizing: border-box;
+}
+
+.product-input label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.product-input input:focus~label,
+.product-input input:valid~label {
+    top: -5px;
+}
+
+.product-input .icon {
+    position: absolute;
+    top: 13px;
+    right: 0;
+    font-size: 25px;
+}
+
+.file-input {
+    position: relative;
+    display: inline-block;
+}
+
+.file-input input[type="file"]{
+    display: none;
+}
+
+.file-input label{
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: rgb(var(--primary-color));
+    color: rgb(var(--white));
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;    
+}
+
+.file-input label:hover{
+    background-color: rgba(var(--primary-color), .7);
+}
+
+#preview-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#preview {
+    display: none;
+    max-width: 100px;
+    height: auto;
+    border: 1px solid rgb(var(--background-light));
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.submit-product{
+    color: rgb(var(--white));;
+    background-color: rgb(var(--primary-color));
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.submit-product:hover{
+    background-color: rgba(var(--primary-color), .7);
+}
+
+.product-error{
+    padding: 10px;
+    background-color: rgba(var(--red), .5);
+    border: 3px solid rgb(var(--red));
+    color: rgb(var(--white));;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.product-error.product-exists{
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.product-success{
+    padding: 10px;
+    background-color: rgba(var(--red), .5);
+    border: 3px solid rgb(var(--green));
+    color: rgb(var(--white));
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.main-product-container {
+     /* Maksimalna širina za celu stranicu proizvoda */
+    margin: 40px auto; /* Centriranje i razmak od ivica */
+    padding: 0 15px; /* Mali padding sa strane za manje ekrane */
+}
+
+/* Stil za "kvadrat" koji sadrži sliku i podatke proizvoda */
+.product-info-box {
+    background-color: rgba(var(--background-light), .7); /* Bela pozadina */
+    border: 1px solid rgb(var(--border-light)); /* Svetla ivica */
+    border-radius: 8px; /* Zaobljene ivice */
+    box-shadow: 0 4px 10px rgb(var(--border-dark)); /* Blaga senka */
+    padding: 30px; /* Unutrašnji padding */
+    margin-bottom: 30px; /* Razmak između ovog bloka i narednih */
+    display: flex; /* Koristimo Flexbox za raspored slike i detalja */
+    flex-wrap: wrap; /* Omogućava da se elementi prelome na manjim ekranima */
+    gap: 40px; /* Razmak između slike i detalja */
+    align-items: flex-start; /* Poravnaj elemente na početak vertikalno */
+}
+
+.product-image-display {
+    flex: 1; /* Slika zauzima 1 deo raspoloživog prostora */
+    min-width: 280px; /* Minimalna širina za sliku da ne bude previše mala */
+    display: flex;
+    justify-content: center; /* Centriranje slike unutar wrapa */
+    align-items: center;
+}
+
+.product-main-image {
+    max-width: 100%; /* Osigurava da slika ne iskoči iz okvira */
+    height: auto;
+    border-radius: 8px; /* Zaobljene ivice slike */
+    border: 1px solid rgb(var(--border-light));
+    box-shadow: 0 2px 8px rgba(var(--black), .3);
+}
+
+.product-details-area {
+    flex: 2; /* Detalji zauzimaju 2 dela raspoloživog prostora (dva puta više od slike) */
+    min-width: 320px; /* Minimalna širina za detalje */
+}
+
+.product-title {
+    font-size: 2.5em;
+    color: rgb(var(--primary-color)); /* Potpuno neprozirna primarna boja za naslov */
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.product-price {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: rgb(var(--primary-color)); /* Može i --primary-color-full */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.product-price .currency {
+    font-size: 0.7em;
+    color: rgb(var(--secondary-color));
+}
+
+.product-stock-quantity {
+    font-size: 1.1em;
+    color: rgb(var(--secondary-color));
+    margin-bottom: 25px;
+}
+
+.product-stock-quantity strong {
+    color: rgb(var(--primary-color)); /* Istakni broj dostupnih komada */
+}
+
+.add-to-cart-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Razmak između inputa i dugmeta */
+    align-items: center;
+    margin-top: 20px;
+}
+
+.quantity-input {
+    width: 80px; /* Širina input polja za količinu */
+    padding: 10px 15px;
+    border: 1px solid rgb(var(--border-dark));
+    border-radius: 5px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.add-to-cart-button {
+    background-color: rgb(var(--primary-color));
+    color: rgb(var(--white));
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: rgb(var(--button-hover-color));
+}
+
+/* Stilovi za placeholder divove (delovi za komentare) */
+.comments-section-placeholder,
+.add-comment-section-placeholder {
+    border: 1px solid rgb(var(--border-light)); /* Koristimo konzistentnu boju ivice */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: rgb(var(--background-light));
+    box-shadow: 0 2px 5px rgb(var(--background-dark));
+}
+
+.comments-section-placeholder h2 {
+    color: rgb(var(--secondary-color));
+    text-align: center;
+    font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-product-container {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    .product-info-box {
+        flex-direction: column; /* Na manjim ekranima, složi sliku i detalje vertikalno */
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .product-image-display,
+    .product-details-area {
+        min-width: unset; /* Ukloni minimalnu širinu na malim ekranima */
+        flex: unset; /* Ukloni flex proporcije, neka zauzimaju celu širinu */
+        width: 100%; /* Zauzimaju celu širinu */
+    }
+
+    .product-main-image {
+        max-width: 80%; /* Smanji širinu slike malo na mobilnom */
+    }
+
+    .product-title {
+        font-size: 2em;
+        text-align: center; /* Centriraj naslov proizvoda */
+    }
+
+    .product-price,
+    .product-stock-quantity {
+        text-align: center; /* Centriraj tekst */
+        justify-content: center; /* Centriraj cenu i količinu */
+    }
+
+    .add-to-cart-form {
+        flex-direction: column; /* Input i dugme idu u kolonu */
+        width: 100%;
+    }
+
+    .quantity-input,
+    .add-to-cart-button {
+        width: 100%; /* Dugmad zauzimaju celu širinu */
+        max-width: 250px; /* Ograniči maksimalnu širinu */
+        margin: 0 auto; /* Centriraj */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+}

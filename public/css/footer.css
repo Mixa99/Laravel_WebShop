@@ -1,0 +1,107 @@
+
+.container-footer {
+    background-color: rgb(var(--primary-color)); /* Tamna pozadina za ceo footer */
+    color: rgb(var(--white)); /* Svetli tekst */
+    padding: 40px 20px; /* Unutrašnji padding */
+    text-align: center; /* Centriranje sadržaja */
+    margin-top: 50px; /* Razmak iznad footera, ako želite da se odvoji od prethodnog sadržaja */
+}
+
+.contact-section {
+    max-width: 800px; /* Ograničenje širine sadržaja unutar footera */
+    margin: 0 auto; /* Centriranje kontakt sekcije */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section h2 {
+    color: rgb(var(--text-light)); /* Beli naslov na tamnoj pozadini */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.contact-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: rgb(var(--text-light)); /* Plava linija ispod naslova */
+    border-radius: 2px;
+}
+
+.contact-section p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    max-width: 600px; /* Ograniči širinu pasusa za bolju čitljivost */
+}
+
+.contact-button {
+    display: inline-block; /* Omogućava padding i margin */
+    background-color: rgb(var(--text-light));
+    color: rgb(var(--background-dark));
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none; /* Uklanja podvlačenje linka */
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    margin-bottom: 25px; /* Razmak između dugmeta i copyright sekcije */
+}
+
+.contact-button:hover {
+    background-color: rgb(var(--border-light));
+}
+
+.copyright {
+    display: flex; /* Koristi flexbox za poravnanje slike i teksta */
+    flex-direction: column; /* Slaže elemente vertikalno */
+    align-items: center; /* Centriraj horizontalno */
+    margin-top: 30px; /* Razmak iznad copyright sekcije */
+    padding-top: 20px; /* Padding unutar copyright sekcije */
+    border-top: 1px solid rgba(var(--black), 0.1); /* Suptilna linija iznad copyright-a */
+    width: 100%; /* Zauzima celu širinu roditelja */
+}
+
+.copyright .footer-img {
+    width: 80px; /* Veličina logoa */
+    height: auto;
+    border-radius: 50%; /* Zaobli logo ako je kvadratan */
+    margin-bottom: 15px; /* Razmak ispod logoa */
+    opacity: 0.8; /* Mala prozirnost */
+}
+
+.copyright p {
+    font-size: 0.95em;
+    color: rgba(var(--black)5, 0.7); /* Svetliji, suptilniji tekst */
+    margin: 0; /* Ukloni podrazumevane margine pasusa */
+}
+
+/* Responsive prilagođavanja */
+@media (max-width: 768px) {
+    .container-footer {
+        padding: 30px 15px;
+    }
+
+    .contact-section h2 {
+        font-size: 2em;
+    }
+
+    .contact-section p {
+        font-size: 1em;
+    }
+
+    .contact-button {
+        padding: 10px 25px;
+        font-size: 1em;
+    }
+
+    .copyright .footer-img {
+        width: 60px;
+    }
+}

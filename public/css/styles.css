@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+:root {
+    --primary-color: 17, 128, 113; /* Plava boja za naslove i dugmad */
+    --secondary-color: 108, 117, 125; /* Siva boja za tekst */
+    --white: 255, 255, 255;
+    --black: 0, 0, 0;
+    --border-light: 220, 220, 220;
+    --border-dark: 45, 45, 45;
+    --background-light: 235, 235, 235;
+    --background-dark: 52, 58, 64; /* Tamna pozadina za footer */
+    --text-light: 248, 249, 250; /* Svetli tekst za tamnu pozadinu */
+    --button-hover-color: 11, 177, 155; /* Tamnija plava za hover dugmeta */
+    --red: 200, 35, 51;
+    --green: 3, 180, 41; 
+}
+
+html, body {
+    font-family: 'Poppins', Times, serif;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content{
+    flex: 1;
+}
+
+.content-size {
+    max-width: 60vw;
+    padding: 0 20vw;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 10px;
+}

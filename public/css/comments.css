@@ -1,0 +1,190 @@
+/* Naslov sekcije komentara (Komentari) */
+.comments-main-header,
+.add-comment-header {
+    font-size: 2em;
+    color: rgb(var(--primary-color));
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.comments-main-header::after,
+.add-comment-header::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: rgb(var(--primary-color));
+    border-radius: 2px;
+}
+
+/* Stil za poruku "Nema komentara" */
+.no-comments-message {
+    text-align: center;
+    font-size: 1.1em;
+    color: rgb(var(--secondary-color));
+    padding: 20px;
+    border: 1px dashed rgb(var(--border-color));
+    border-radius: 5px;
+    background-color: rgb(var(--background-light));
+}
+
+/* Stil za svaki pojedinačni komentar */
+.comment-item {
+    background-color: rgb(var(--white)); /* Svetlija pozadina unutar "kvadrata" */
+    border: 1px solid rgb(var(--border-color));
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px; /* Razmak između komentara */
+    box-shadow: 0 2px 5px rgba(var(--black), .3);
+}
+
+.comment-item:last-child {
+    margin-bottom: 0; /* Uklanja marginu poslednjeg komentara */
+}
+
+.comment-author {
+    font-size: 1.4em;
+    color: rgb(var(--primary-color-full));
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.comment-rating-display {
+    font-size: 1.1em;
+    color: rgb(var(--secondary-color));
+    margin-bottom: 10px;
+}
+
+.comment-rating-display .rating-stars {
+    font-weight: bold;
+    color: rgb(var(--primary-color), 0.8); /* Malo providnija primarna boja */
+}
+
+.comment-body-text {
+    font-size: 1em;
+    color: rgb(var(--secondary-color));
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Stilovi za formu za dodavanje komentara */
+.comment-form-container {
+    padding: 20px;
+    border: 1px solid rgb(var(--border-color));
+    border-radius: 8px;
+    background-color: rgb(var(--white));
+    box-shadow: 0 2px 5px rgba(var(--black), .7);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block; /* Postavlja labelu u svoj red */
+    font-size: 1em;
+    color: rgb(var(--secondary-color));
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid rgba(var(--border-light), .9);
+    border-radius: 5px;
+    font-size: 1em;
+    color: rgb(var(--secondary-color));
+    background-color: rgba(var(--background-light), .7); /* Bela pozadina za inpute */
+    box-sizing: border-box; /* Padding i border su uključeni u ukupnu širinu */
+}
+
+.form-textarea {
+    resize: vertical; /* Dozvoljava korisniku da menja visinu */
+    min-height: 100px;
+}
+
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: rgb(var(--primary-color)); /* Plavi border na fokus */
+    box-shadow: 0 0 0 3px rgba(var(--black), 0.2); /* Blaga senka na fokus */
+}
+
+.submit-comment-button {
+    background-color: rgb(var(--primary-color));
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto; /* Da dugme ne zauzima celu širinu */
+    display: block; /* Postavi dugme u svoj red */
+    margin-top: 20px;
+}
+
+.submit-comment-button:hover {
+    background-color: rgb(var(--button-hover-color));
+}
+
+/* Stil za poruku o grešci (ako postoji) */
+.error-message {
+    color: #dc3545; /* Crvena boja za greške */
+    background-color: rgba(#dc3545, 0.1); /* Blago crvena pozadina */
+    border: 1px solid #dc3545;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 20px;
+    font-size: 0.95em;
+    text-align: center;
+}
+
+/* Responsive prilagođavanja za sekcije komentara */
+@media (max-width: 768px) {
+    .comments-section-wrapper,
+    .add-comment-section-wrapper {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .comments-main-header,
+    .add-comment-header {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .comment-item {
+        padding: 15px;
+    }
+
+    .comment-author {
+        font-size: 1.2em;
+    }
+
+    .comment-rating-display {
+        font-size: 1em;
+    }
+
+    .form-select,
+    .form-textarea {
+        font-size: 0.95em;
+        padding: 8px 12px;
+        background-color: rgb(var(--white));
+    }
+
+    .submit-comment-button {
+        font-size: 1em;
+        padding: 10px 20px;
+        width: 100%; /* Dugme zauzima celu širinu na malim ekranima */
+    }
+}
